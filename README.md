@@ -13,4 +13,4 @@
     - Evento_Pastoral.
 
 ## 4. Diagramação:
-![Alt text](diagrams.png)
+![Alt text](images/diagrams.png)
