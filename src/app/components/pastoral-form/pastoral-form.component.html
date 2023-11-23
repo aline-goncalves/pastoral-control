@@ -1,0 +1,37 @@
+<section class="container pastoral-form ff-inter">
+    <header class="header">
+        <h2>Adicione uma nova pastoral ou um novo movimento</h2>
+    </header>
+
+    <form class="flex">
+        <div class="col-12">
+            <app-pastoral-field-group [for]="'name'" [label]="'Nome:'">
+                <input id="name" type="text" class="input">
+            </app-pastoral-field-group>
+        </div>
+
+        <div class="col-12">
+            <app-pastoral-field-group [for]="'coordinator'" [label]="'Coordenador:'">
+                <input id="coordinator" type="text" class="input">
+            </app-pastoral-field-group>
+        </div>
+
+        <div class="col-12">
+            <app-pastoral-field-group [for]="'patron-saint'" [label]="'Padroeiro:'">
+                <input id="patron-saint" type="text" class="input">
+            </app-pastoral-field-group>
+        </div>
+
+        <div class="col-12">
+            <app-pastoral-field-group [for]="'is-movement'" [label]="'É um movimento?'">
+                <p-inputSwitch [id]="'is-movement'" [(ngModel)]="checked" ></p-inputSwitch>
+            </app-pastoral-field-group>
+        </div>
+
+        <div class="col-12">
+            <app-pastoral-field-group [for]="'fixed-activity'" [label]="'Atividade fixa:'">
+                <input id="fixed-activity" type="text" class="input">
+            </app-pastoral-field-group>
+        </div>       
+    </form>
+</section>

@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './pastoral-form.component.html',
   styleUrls: ['./pastoral-form.component.css']
 })
-export class PastoralFormComponent {
-
+export class PastoralFormComponent  {
+  checked: boolean = false;
 }

@@ -1,0 +1,10 @@
+<div [class]="class">
+    <label [for]="for" [class]="classLabel">{{ label }}</label>
+    <ng-content></ng-content>
+    <div class="container-error">
+        <span *ngIf="isRequired"> {{ requiredMessage }} </span>
+        <span *ngIf="isMaxLength"> {{ maxLengthMessage }} </span>
+
+        <ng-template *ngIf="errorTemplate"></ng-template>
+    </div>
+</div>
