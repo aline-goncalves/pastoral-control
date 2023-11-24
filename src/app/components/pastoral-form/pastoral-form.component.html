@@ -3,7 +3,7 @@
         <h2>Adicione uma nova pastoral ou um novo movimento</h2>
     </header>
 
-    <form class="flex">
+    <div [formGroup]="pastoralFormGroup" class="flex">
         <div class="col-12">
             <app-pastoral-field-group [for]="'name'" [label]="'Nome:'">
                 <input id="name" type="text" class="input">
@@ -24,7 +24,12 @@
 
         <div class="col-12">
             <app-pastoral-field-group [for]="'is-movement'" [label]="'É um movimento?'">
-                <p-inputSwitch [id]="'is-movement'" [(ngModel)]="checked" ></p-inputSwitch>
+                <app-pastoral-input-switch  [id]="'is-movement'"
+                                            [formControlName]="'is-movement'"
+                                            [class-span]="'switch-span'"
+                                            [labelWhenTrue]="'Sim'"
+                                            [labelWhenFalse]="'Não'">
+                </app-pastoral-input-switch>
             </app-pastoral-field-group>
         </div>
 
@@ -33,5 +38,5 @@
                 <input id="fixed-activity" type="text" class="input">
             </app-pastoral-field-group>
         </div>       
-    </form>
+    </div>
 </section>
