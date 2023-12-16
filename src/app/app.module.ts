@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PastoralFormComponent } from './components/pastoral-form/pastoral-form.component';
 import { PastoralHeaderComponent } from './components/pastoral-header/pastoral-header.component';
 import { PastoralFooterComponent } from './components/pastoral-footer/pastoral-footer.component';
 import { PastoralFieldGroupComponent } from './components/pastoral-field-group/pastoral-field-group.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { InputSwitchModule } from 'primeng/inputswitch';
+import { ButtonModule } from 'primeng/button';
 import { PastoralInputSwitchComponent } from './components/pastoral-input-switch/pastoral-input-switch.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +28,9 @@ import { PastoralInputSwitchComponent } from './components/pastoral-input-switch
     AppRoutingModule,
     FormsModule,
     InputSwitchModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ButtonModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

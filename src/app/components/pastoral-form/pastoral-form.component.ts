@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { Component } from "@angular/core";
+import { FormBuilder, FormControl, FormGroup } from "@angular/forms";
 
 @Component({
   selector: 'app-pastoral-form',
@@ -8,18 +8,23 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 export class PastoralFormComponent  {
   pastoralFormGroup!:FormGroup;
+  movement!:FormControl;
 
-  get isMovement() : any{
-    return this.isMovement.get('is-movement')?.value;
-  }
+  trueValue: boolean = true;
+  falseValue: boolean = false;
+
+  showLabel: boolean = true;
 
   constructor(private formBuilder : FormBuilder){}
 
   ngOnInit():void{
-    this.isMovement.get('is-movement')?.setValue(false);
-
     this.pastoralFormGroup = this.formBuilder.group({
-      isMovement: [false]
+      id:[null],
+      name: '',
+      coordinator: '',
+      patronSaint: '',
+      isMovement: [true],
+      fixedActivity: ''
     });
   }
 }

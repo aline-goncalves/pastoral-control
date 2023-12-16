@@ -1,42 +1,51 @@
-<section class="container pastoral-form ff-inter">
-    <header class="header">
-        <h2>Adicione uma nova pastoral ou um novo movimento</h2>
-    </header>
+<section class="container pastoral-form ff-inter pastoral_register_form">
+    <div [formGroup]="pastoralFormGroup" class="flex" *ngIf="pastoralFormGroup">
+        <header class="header">
+            <h2>Adicione uma nova pastoral ou um novo movimento</h2>
+        </header>
 
-    <div [formGroup]="pastoralFormGroup" class="flex">
         <div class="col-12">
-            <app-pastoral-field-group [for]="'name'" [label]="'Nome:'">
-                <input id="name" type="text" class="input">
+            <app-pastoral-field-group [for]="'name'" [label]="'Nome:'" [class-label]="'label col-3'">
+                <input class="col-9" formControlName="name" id="name" type="text" class="input">
             </app-pastoral-field-group>
         </div>
 
         <div class="col-12">
-            <app-pastoral-field-group [for]="'coordinator'" [label]="'Coordenador:'">
-                <input id="coordinator" type="text" class="input">
+            <app-pastoral-field-group [for]="'coordinator'" [label]="'Coordenador:'" [class-label]="'label col-3'">
+                <input class="col-9" formControlName="coordinator" id="coordinator" type="text" class="input">
             </app-pastoral-field-group>
         </div>
 
         <div class="col-12">
-            <app-pastoral-field-group [for]="'patron-saint'" [label]="'Padroeiro:'">
-                <input id="patron-saint" type="text" class="input">
+            <app-pastoral-field-group [for]="'patronSaint'" [label]="'Padroeiro:'" [class-label]="'label col-3'">
+            <input class="col-9" formControlName="patronSaint" id="patronSaint" type="text" class="input">
             </app-pastoral-field-group>
         </div>
 
-        <div class="col-12">
-            <app-pastoral-field-group [for]="'is-movement'" [label]="'É um movimento?'">
-                <app-pastoral-input-switch  [id]="'is-movement'"
-                                            [formControlName]="'is-movement'"
+        <div class="col-12 field-group">
+            <app-pastoral-field-group for="isMovement" [label]="'É um movimento?'" [class-label]="'label col-3'">
+                <app-pastoral-input-switch  id="isMovement"
+                                            class="col-3"
+                                            [formControlName]="'isMovement'"
                                             [class-span]="'switch-span'"
                                             [labelWhenTrue]="'Sim'"
-                                            [labelWhenFalse]="'Não'">
+                                            [labelWhenFalse]="'Não'"
+                                            [trueValue]="true"
+                                            [falseValue]="false">
                 </app-pastoral-input-switch>
             </app-pastoral-field-group>
         </div>
 
         <div class="col-12">
-            <app-pastoral-field-group [for]="'fixed-activity'" [label]="'Atividade fixa:'">
-                <input id="fixed-activity" type="text" class="input">
+            <app-pastoral-field-group [for]="'fixedActivity'" [label]="'Atividade fixa:'" [class-label]="'label col-3'">
+                <input class="col-9" formControlName="fixedActivity" id="fixedActivity" type="text" class="input">
             </app-pastoral-field-group>
-        </div>       
+        </div>   
+        
+        <div class="col-12 flex-end">
+            <button>
+                Salvar
+            </button>
+        </div>
     </div>
 </section>

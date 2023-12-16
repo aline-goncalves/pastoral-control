@@ -1,9 +1,9 @@
 <div [class]="class">
-    <label [for]="for" [class]="classLabel">{{ label }}</label>
+    <label class="float-left" [for]="for" [class]="classLabel">{{ label }}</label>
     <ng-content></ng-content>
     <div class="container-error">
-        <span *ngIf="isRequired"> {{ requiredMessage }} </span>
-        <span *ngIf="isMaxLength"> {{ maxLengthMessage }} </span>
+        <span [class]="classSpan" *ngIf="isRequired"> {{ requiredMessage }} </span>
+        <span [class]="classSpan" *ngIf="isMaxLength"> {{ maxLengthMessage }} </span>
 
         <ng-template *ngIf="errorTemplate"></ng-template>
     </div>

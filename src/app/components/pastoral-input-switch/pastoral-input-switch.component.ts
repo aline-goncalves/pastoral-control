@@ -1,5 +1,5 @@
 import { Component, Input, forwardRef } from '@angular/core';
-import { ControlContainer, NG_VALUE_ACCESSOR, FormControl, FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-pastoral-input-switch',
@@ -14,8 +14,7 @@ import { ControlContainer, NG_VALUE_ACCESSOR, FormControl, FormGroup, FormBuilde
   ]
 })
 export class PastoralInputSwitchComponent {
-  @Input('id') id: string = '';
-
+  @Input('id') id!: string;
   @Input('class') class: string = "flex gap-2 justify-content-center";
 
   @Input('showLabel') showLabel: boolean = true;
@@ -23,32 +22,20 @@ export class PastoralInputSwitchComponent {
   @Input('labelWhenTrue') labelWhenTrue!: string;
   @Input('labelWhenFalse') labelWhenFalse!: string;
 
-  @Input('trueValue') trueValue: any = true;
-  @Input('falseValue') falseValue: any = false;
+  @Input('trueValue') trueValue!: any;
+  @Input('falseValue') falseValue!: any;
 
   @Input('class-span') classSpan: string = '';
 
-  @Input() formControl!: FormControl;
-  @Input() formControlName!: string;
-
   inputSwitchFormGroup!:FormGroup;
 
-  get isMovement() : any{
-    return this.isMovement.get(this.id)?.value;
+  checked: boolean = false; 
+
+  handleEvent(event : any){
+    this.checked = this.returnIfIsChecked(event);  
   }
 
-  constructor(private formBuilder : FormBuilder){}
-
-  ngOnInit():void{
-    this.isMovement.get(this.id)?.setValue(false);
-
-    this.inputSwitchFormGroup = this.formBuilder.group({
-      isMovement: [false]
-    });
-  }
-
-  get isEnable(){
-    console.log(this.isMovement?.value);
-    return this.isMovement?.value;
+  private returnIfIsChecked(event : any): boolean{
+    return event.checked == this.trueValue;
   }
 }

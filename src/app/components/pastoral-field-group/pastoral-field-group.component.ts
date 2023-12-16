@@ -10,6 +10,7 @@ export class PastoralFieldGroupComponent {
   @Input('class') class:string = '';
   @Input('for') for:string = '';
   @Input('class-label') classLabel:string = '';
+  @Input('class-span') classSpan:string = '';
   @Input('error-template') errorTemplate:string = '';
   @Input('required-message') requiredMessage:string = '';
   @Input('max-length-message') maxLengthMessage:string = '';

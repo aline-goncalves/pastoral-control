@@ -1,8 +1,11 @@
 <div [class]="class" [formGroup]="inputSwitchFormGroup">
-    <p-inputSwitch id="{{id}}" [formControl]="formControl" [formControlName]="'is-movement'" [trueValue]="trueValue" [falseValue]="falseValue">
+    <p-inputSwitch id="{{id}}" 
+                   [trueValue]="trueValue" 
+                   [falseValue]="falseValue" 
+                   (onChange)="handleEvent($event)">
     </p-inputSwitch>
   
-    <ng-container *ngIf="isEnable && showLabel; else hasDisabled">
+    <ng-container *ngIf="checked && showLabel; else hasDisabled">
       <span [class]="classSpan">{{labelWhenTrue}}</span>
     </ng-container>
   
