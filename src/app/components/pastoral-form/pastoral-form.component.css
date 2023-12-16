@@ -82,6 +82,12 @@ h2{
     height: 40rem;
     background: rgb(235, 223, 223);
   }
+
+  p{
+    color: crimson;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+  }
   
   .container {
     width: 48vw;

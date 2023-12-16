@@ -43,9 +43,8 @@
         </div>   
         
         <div class="col-12 flex-end">
-            <button>
-                Salvar
-            </button>
+            <button (click)='onSubmitForm()'>Salvar</button>
+            <p>{{ formMessage }}</p>
         </div>
     </div>
 </section>

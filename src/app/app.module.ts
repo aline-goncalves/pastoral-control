@@ -5,14 +5,14 @@ import { PastoralFormComponent } from './components/pastoral-form/pastoral-form.
 import { PastoralHeaderComponent } from './components/pastoral-header/pastoral-header.component';
 import { PastoralFooterComponent } from './components/pastoral-footer/pastoral-footer.component';
 import { PastoralFieldGroupComponent } from './components/pastoral-field-group/pastoral-field-group.component';
-
+import { NotfoundComponent } from './demo/components/notfound/notfound.component';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { ButtonModule } from 'primeng/button';
 import { PastoralInputSwitchComponent } from './components/pastoral-input-switch/pastoral-input-switch.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { AppLayoutModule } from './layout/app.layout.module';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -21,18 +21,21 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PastoralHeaderComponent,
     PastoralFooterComponent,
     PastoralFieldGroupComponent,
-    PastoralInputSwitchComponent
+    PastoralInputSwitchComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AppLayoutModule,
     FormsModule,
     InputSwitchModule,
     ReactiveFormsModule,
-    ButtonModule,
-    NgbModule
+    ButtonModule
   ],
-  providers: [],
+  providers:  [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

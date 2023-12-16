@@ -15,6 +15,8 @@ export class PastoralFormComponent  {
 
   showLabel: boolean = true;
 
+  formMessage!:string;
+
   constructor(private formBuilder : FormBuilder){}
 
   ngOnInit():void{
@@ -26,5 +28,9 @@ export class PastoralFormComponent  {
       isMovement: [true],
       fixedActivity: ''
     });
+  }
+
+  public onSubmitForm() {
+    return this.formMessage = 'Pastoral/Movimento cadastrado com sucesso!';
   }
 }

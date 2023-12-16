@@ -1,5 +1,6 @@
-import { Component, Input, forwardRef } from '@angular/core';
-import { FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Component, Input, forwardRef } from "@angular/core";
+import { FormGroup, NG_VALUE_ACCESSOR } from "@angular/forms";
+
 
 @Component({
   selector: 'app-pastoral-input-switch',
