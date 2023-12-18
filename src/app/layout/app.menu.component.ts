@@ -16,9 +16,9 @@ export class AppMenuComponent implements OnInit {
         this.model = [
             {
                 items: [
-                    { label: 'Cadastro de Pastorais', icon: 'pi pi-fw pi-plus', routerLink: ['/src/app/components/pastoral-form/pastoral-form.component.html'] },
+                    { label: 'Cadastro de Pastorais', icon: 'pi pi-fw pi-plus', routerLink: ['/pastoralform'] },
                     { label: 'Visualizar Pastorais', icon: 'pi pi-fw pi-list', routerLink: ['/'] },
-                    { label: 'Cadastro de Eventos', icon: 'pi pi-fw pi-plus', routerLink: ['/'] },
+                    { label: 'Cadastro de Eventos', icon: 'pi pi-fw pi-plus', routerLink: ['/eventform'] },
                     { label: 'Visualizar Eventos', icon: 'pi pi-fw pi-list', routerLink: ['/'] }
                 ]
             },

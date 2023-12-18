@@ -1,8 +1,8 @@
 <div class="card mb-3 pastoral-form pastoral_register_form">
     <section>
-        <div [formGroup]="pastoralFormGroup" *ngIf="pastoralFormGroup">
+        <div [formGroup]="eventFormGroup" *ngIf="eventFormGroup">
             <header class="header">
-                <h2>Adicione uma nova pastoral ou um novo movimento</h2>
+                <h2>Adicione um novo evento</h2>
             </header>
 
             <div class="col-12">
@@ -20,21 +20,6 @@
             <div class="col-12">
                 <app-pastoral-field-group [for]="'patronSaint'" [label]="'Padroeiro:'" [class-label]="'label col-3'">
                 <input class="col-9" formControlName="patronSaint" id="patronSaint" type="text" class="input">
-                </app-pastoral-field-group>
-            </div>
-
-            <div class="col-12 field-group">
-                <app-pastoral-field-group for="isMovement" [label]="'É um movimento?'" [class-label]="'label col-3'">
-                    <app-pastoral-input-switch  id="isMovement"
-                                                class="col-3"
-                                                [formControlName]="'isMovement'"
-                                                [class-span]="'switch-span'"
-                                                [labelWhenTrue]="'Sim'"
-                                                [labelWhenFalse]="'Não'"
-                                                [trueValue]="true"
-                                                [falseValue]="false"
-                                                (isMovement)="isMovementChecked($event)">
-                    </app-pastoral-input-switch>
                 </app-pastoral-field-group>
             </div>
 

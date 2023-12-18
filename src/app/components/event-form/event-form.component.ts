@@ -2,12 +2,12 @@ import { Component } from "@angular/core";
 import { FormBuilder, FormControl, FormGroup } from "@angular/forms";
 
 @Component({
-  selector: 'app-pastoral-form',
-  templateUrl: './pastoral-form.component.html',
-  styleUrls: ['./pastoral-form.component.css']
+  selector: 'app-event-form',
+  templateUrl: './event-form.component.html',
+  styleUrls: ['./event-form.component.css']
 })
-export class PastoralFormComponent  {
-  pastoralFormGroup!:FormGroup;
+export class EventFormComponent  {
+  eventFormGroup!:FormGroup;
   movement!:FormControl;
 
   trueValue: boolean = true;
@@ -20,7 +20,7 @@ export class PastoralFormComponent  {
   constructor(private formBuilder : FormBuilder){}
 
   ngOnInit():void{
-    this.pastoralFormGroup = this.formBuilder.group({
+    this.eventFormGroup = this.formBuilder.group({
       id:[null],
       name: '',
       coordinator: '',
@@ -31,11 +31,11 @@ export class PastoralFormComponent  {
   }
 
   public onSubmitForm() {
-    console.log(this.pastoralFormGroup.value);
+    console.log(this.eventFormGroup.value);
     return this.formMessage = 'Pastoral/Movimento cadastrado com sucesso!';
   }
 
   isMovementChecked(isMovementOutput:boolean): void{
-    this.pastoralFormGroup.patchValue({isMovement: isMovementOutput});
+    this.eventFormGroup.patchValue({isMovement: isMovementOutput});
   }
 }

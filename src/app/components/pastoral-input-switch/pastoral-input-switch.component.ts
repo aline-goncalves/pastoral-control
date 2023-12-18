@@ -1,4 +1,4 @@
-import { Component, Input, forwardRef } from "@angular/core";
+import { Component, Input, Output, forwardRef, EventEmitter } from "@angular/core";
 import { FormGroup, NG_VALUE_ACCESSOR } from "@angular/forms";
 
 
@@ -28,12 +28,15 @@ export class PastoralInputSwitchComponent {
 
   @Input('class-span') classSpan: string = '';
 
+  @Output() isMovement = new EventEmitter();
+
   inputSwitchFormGroup!:FormGroup;
 
   checked: boolean = false; 
 
   handleEvent(event : any){
     this.checked = this.returnIfIsChecked(event);  
+    this.isMovement.emit(this.checked);
   }
 
   private returnIfIsChecked(event : any): boolean{

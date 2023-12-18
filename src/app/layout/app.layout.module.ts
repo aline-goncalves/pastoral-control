@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputTextModule } from 'primeng/inputtext';
@@ -17,6 +17,10 @@ import { AppFooterComponent } from './app.footer.component';
 import { AppConfigModule } from './config/config.module';
 import { AppSidebarComponent } from "./app.sidebar.component";
 import { AppLayoutComponent } from "./app.layout.component";
+import { PastoralFieldGroupComponent } from '../components/pastoral-field-group/pastoral-field-group.component';
+import { PastoralInputSwitchComponent } from '../components/pastoral-input-switch/pastoral-input-switch.component';
+import { PastoralFormComponent } from '../components/pastoral-form/pastoral-form.component';
+import { EventFormComponent } from '../components/event-form/event-form.component';
 
 @NgModule({
     declarations: [
@@ -26,10 +30,15 @@ import { AppLayoutComponent } from "./app.layout.component";
         AppMenuComponent,
         AppSidebarComponent,
         AppLayoutComponent,
+        PastoralFormComponent,
+        PastoralFieldGroupComponent,
+        PastoralInputSwitchComponent,
+        EventFormComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
+        ReactiveFormsModule,
         HttpClientModule,
         BrowserAnimationsModule,
         InputTextModule,
