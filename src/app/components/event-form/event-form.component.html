@@ -1,0 +1,50 @@
+<div class="card mb-3 pastoral-form pastoral_register_form">
+    <section>
+        <div [formGroup]="eventFormGroup" *ngIf="eventFormGroup">
+            <header class="header">
+                <h2>Adicione um novo evento</h2>
+            </header>
+
+            <div class="col-12">
+                <app-pastoral-field-group [for]="'name'" [label]="'Nome:'" [class-label]="'label col-3'">
+                    <input class="col-9" formControlName="name" id="name" type="text" class="input">
+                </app-pastoral-field-group>
+            </div>
+
+            <div class="col-12">
+                <app-pastoral-field-group [for]="'coordinator'" [label]="'Coordenador:'" [class-label]="'label col-3'">
+                    <input class="col-9" formControlName="coordinator" id="coordinator" type="text" class="input">
+                </app-pastoral-field-group>
+            </div>
+
+            <div class="col-12">
+                <app-pastoral-field-group [for]="'patronSaint'" [label]="'Padroeiro:'" [class-label]="'label col-3'">
+                <input class="col-9" formControlName="patronSaint" id="patronSaint" type="text" class="input">
+                </app-pastoral-field-group>
+            </div>
+
+            <div class="col-12">
+                <app-pastoral-field-group [for]="'fixedActivity'" [label]="'Atividade fixa:'" [class-label]="'label col-3'">
+                    <input class="col-9" formControlName="fixedActivity" id="fixedActivity" type="text" class="input">
+                </app-pastoral-field-group>
+            </div>   
+
+            <div class="col-12">
+                <app-pastoral-field-group [for]="'begining'" [label]="'Início:'" [class-label]="'label col-3'">
+                    <p-calendar class="col-9" formControlName="begining" id="begining" [showTime]="true" [showSeconds]="true" class="input"></p-calendar>
+                </app-pastoral-field-group>
+            </div>  
+
+            <div class="col-12">
+                <app-pastoral-field-group [for]="'ending'" [label]="'Fim:'" [class-label]="'label col-3'">
+                    <p-calendar class="col-9" formControlName="ending" id="ending" [showTime]="true" [showSeconds]="true" class="input"></p-calendar>
+                </app-pastoral-field-group>
+            </div>  
+            
+            <div class="col-12 flex-end">
+                <button (click)='onSubmitForm()'>Salvar</button>
+                <p>{{ formMessage }}</p>
+            </div>
+        </div>
+    </section>
+</div>

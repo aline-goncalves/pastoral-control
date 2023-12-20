@@ -1,0 +1,127 @@
+h2{
+    text-align: center;
+    padding-top: 1rem;
+    text-decoration: underline;
+    color: crimson;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+  }
+  
+  button{
+    background-color: crimson;
+    border: crimson;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin: 1rem;
+    color: antiquewhite;
+    font-weight: bolder;
+  }
+  
+  .buttons-div{
+    margin-top: 1rem;
+    margin-left: 35rem;
+  }
+  
+  .reading-status-fieldset-div
+  {
+    width: 15rem;
+    height: auto;
+    padding-left: 2rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    border-color:crimson;
+  }
+  
+  fieldset{
+    border-radius: 1rem;
+    border-color: crimson;
+    padding-left: 1rem;
+    margin-left: -1rem;
+  }
+  
+  .book-atributes-div label{
+    width: 15rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #080881;
+    padding: 1rem;
+    text-align: right;
+  }
+  
+  .book-atributes-div input{
+    width: 50rem;
+    height: 2rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    border-color:crimson;
+    padding: 0.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: crimson;
+  }
+  
+  .book-atributes-div{
+    margin: 1rem;
+  }
+  
+  .reading-status-fieldset-label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #0c0ccf;
+  }
+  
+  legend{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #080881;
+  }
+  
+  .pastoral_register_form{
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: crimson;
+    align-items: center;
+    width: 52rem;
+    height: 40rem;
+    background: rgb(235, 223, 223);
+  }
+
+  p{
+    color: crimson;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+  }
+  
+  .container {
+    width: 48vw;
+    height: 78vh;
+    border-radius: 1rem;
+    background: rgb(235, 223, 223);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    max-width: 1000rem;
+  }
+  
+  body{
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }
+
+  input{
+    border-radius: 30%;
+    border-color: #080881;
+    width: 374px;
+    height: 40px;
+    border-radius: 90px;
+    border: 1px solid #080881;
+    background: #F9EEEE;
+    box-shadow: 0px 2px 2px 0px rgb(235, 223, 223);
+    margin: 0.5rem;
+  }
+
+  .field-group{
+    float: left;
+  }
