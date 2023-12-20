@@ -4,7 +4,8 @@ import { FormBuilder, FormControl, FormGroup } from "@angular/forms";
 @Component({
   selector: 'app-pastoral-form',
   templateUrl: './pastoral-form.component.html',
-  styleUrls: ['./pastoral-form.component.css']
+  styleUrls: ['./pastoral-form.component.css'],
+  
 })
 export class PastoralFormComponent  {
   pastoralFormGroup!:FormGroup;

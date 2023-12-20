@@ -32,7 +32,7 @@ export class EventFormComponent  {
 
   public onSubmitForm() {
     console.log(this.eventFormGroup.value);
-    return this.formMessage = 'Pastoral/Movimento cadastrado com sucesso!';
+    return this.formMessage = 'Evento cadastrado com sucesso!';
   }
 
   isMovementChecked(isMovementOutput:boolean): void{

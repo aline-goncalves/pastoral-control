@@ -17,9 +17,6 @@ import { AppFooterComponent } from './app.footer.component';
 import { AppConfigModule } from './config/config.module';
 import { AppSidebarComponent } from "./app.sidebar.component";
 import { AppLayoutComponent } from "./app.layout.component";
-import { PastoralFieldGroupComponent } from '../components/pastoral-field-group/pastoral-field-group.component';
-import { PastoralInputSwitchComponent } from '../components/pastoral-input-switch/pastoral-input-switch.component';
-import { PastoralFormComponent } from '../components/pastoral-form/pastoral-form.component';
 import { EventFormComponent } from '../components/event-form/event-form.component';
 
 @NgModule({
@@ -29,15 +26,10 @@ import { EventFormComponent } from '../components/event-form/event-form.componen
         AppFooterComponent,
         AppMenuComponent,
         AppSidebarComponent,
-        AppLayoutComponent,
-        PastoralFormComponent,
-        PastoralFieldGroupComponent,
-        PastoralInputSwitchComponent,
-        EventFormComponent
+        AppLayoutComponent
     ],
     imports: [
         BrowserModule,
-        FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
         BrowserAnimationsModule,
