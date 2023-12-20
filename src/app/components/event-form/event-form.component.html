@@ -28,6 +28,18 @@
                     <input class="col-9" formControlName="fixedActivity" id="fixedActivity" type="text" class="input">
                 </app-pastoral-field-group>
             </div>   
+
+            <div class="col-12">
+                <app-pastoral-field-group [for]="'begining'" [label]="'Início:'" [class-label]="'label col-3'">
+                    <p-calendar class="col-9" formControlName="begining" id="begining" [showTime]="true" [showSeconds]="true" class="input"></p-calendar>
+                </app-pastoral-field-group>
+            </div>  
+
+            <div class="col-12">
+                <app-pastoral-field-group [for]="'ending'" [label]="'Fim:'" [class-label]="'label col-3'">
+                    <p-calendar class="col-9" formControlName="ending" id="ending" [showTime]="true" [showSeconds]="true" class="input"></p-calendar>
+                </app-pastoral-field-group>
+            </div>  
             
             <div class="col-12 flex-end">
                 <button (click)='onSubmitForm()'>Salvar</button>

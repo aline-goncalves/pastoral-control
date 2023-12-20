@@ -6,6 +6,7 @@ import { ButtonModule } from 'primeng/button';
 import { EventFormRoutingModule } from '../event-form/event-form-routing.module';
 import { EventFormComponent } from '../event-form/event-form.component';
 import { ComponentsUtilsModule } from '../utils/components-utils.module';
+import { CalendarModule } from 'primeng/calendar';
 
 @NgModule({
     imports: [
@@ -15,7 +16,8 @@ import { ComponentsUtilsModule } from '../utils/components-utils.module';
         InputSwitchModule,
         ButtonModule,
         EventFormRoutingModule,
-        ComponentsUtilsModule
+        ComponentsUtilsModule,
+        CalendarModule
     ],
     declarations: [ EventFormComponent ],
     exports: [ EventFormComponent]

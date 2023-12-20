@@ -26,7 +26,9 @@ export class EventFormComponent  {
       coordinator: '',
       patronSaint: '',
       isMovement: [false],
-      fixedActivity: ''
+      fixedActivity: '',
+      begining: '',
+      ending:''
     });
   }
 
