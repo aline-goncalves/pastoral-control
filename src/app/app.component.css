@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+    padding-top: 1rem;
+    text-decoration: underline;
+    color: crimson;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+  }
+  
+  .project-explanation-div{
+    margin: 1rem;
+  }
